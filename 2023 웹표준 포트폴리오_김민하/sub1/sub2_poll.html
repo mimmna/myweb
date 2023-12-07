@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+    <title> 폼 만들기_설문조사 </title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+       
+       fieldset{
+            width: 600px;
+            margin: auto;
+            border: 1px solid #757575;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px 50px;
+        }
+        
+        input, textarea{
+            padding: 5px;
+            margin: 5px;
+            border: 0.5px solid rgb(143, 100, 253);
+            border-radius: 10px;
+        }
+        select{ width: 150px;}
+
+        label{
+            font-weight: 800;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h2>설문조사</h2>
+        </header>
+
+        <main>
+            <form name="설문" action="">
+                <fieldset>
+                    <label for="">이 &nbsp; 름 : </label>
+                    <input type=“text” size=20>
+
+                    &nbsp;&nbsp; <label for="">성 &nbsp; 별 : </label>
+                    <input type=radio name=sex value=male> 남&nbsp;&nbsp; <input type=radio name=sex value=female> 여<br>
+
+                    <label for="">생년월일 : </label>
+                    <input type=“text” size=18><br>
+
+                    <label for="">이메일 : </label>
+                    <input type=email placeholder=comgild@nate.com required><br>
+
+                    <label for="">주 &nbsp; 소 : </label>
+                    <input type=“text” size=72> <br><br>
+
+                    <label for="">1. 당신이 좋아하는 와인의 타입은?</label><br>
+                    <input type=checkbox name=hobby1 value=v1> 화이트 와인 <br>
+                    <input type=checkbox name=hobby2 value=v2> 레드 와인 <br>
+                    <input type=checkbox name=hobby3 value=v3> 로제 와인 <br>
+                    <input type=checkbox name=hobby4 value=v4> 복합적인 와인 <br><br>
+                    <!-- 여러 항목을 복수 선택할 수 있기 때문에 구분을 위해 name 속성값을 다 다르게 만들어야 함 -->
+
+                    <label for="">2. 맛에 의한 와인의 분류로 당신이 좋아하는 타입은?</label><br>
+                    <input type=radio name=alcohol value=v1> Dry Wine : 감미가 없는 와인으로 식욕촉진에 적합함. <br>
+                    <input type=radio name=alcohol value=v2> Table Wine : 식사를 하면서 음식과 함께 제공되는 와인. <br>
+                    <input type=radio name=alcohol value=v3> Sweet Wine : 단맛을 가지고 있는 와인으로 주로 소화촉진을 돕는데 적합한 와인. <br><br> <!-- 여러 항목중 하나의 항목만 선택할 수 있기 때문에 같은 그룹 끼리는 동일한 name 속성값 사용해야 함 -->
+
+                    <label for="">3. 와이너리 장소로 가장 가고 싶은 나라는?</label>
+                    <select name="hobby" size=1>
+                        <option>이탈리아</option>
+                        <option>칠레</option>
+                        <option selected>스페인</option>
+                        <option>호주</option>
+                        <option>기타</option>
+                    </select><br><br>
+
+                    <label for="">4. 와인과 곁들이는 안주로 가장 좋아하는 것은?</label><br>
+                    <select name="interest" size=6 multiple>
+                        <option value="1" selected>치즈</option>
+                        <option value="2">견과류</option>
+                        <option value="3">과일</option>
+                        <option value="4">스낵</option>
+                        <option value="5">샐러드</option>
+                        <option value="6">기타</option>
+                    </select><br><br>
+
+                    <label for="">5. 와이너리 날짜 지정</label>
+                    <input type="date"><br><br>
+
+                    <label for="">6. 와인협회에 바라는 점</label><br>
+                    <textarea name="introduction" cols=90 rows=8></textarea><br>
+
+                    <input type=submit value="완료" class="btn" > <!-- submit를 만든 이미지로 할때 <input type="image" src="/assets/img/form_and_input/img_btn_submit.png">-->
+                    <input type=reset value="다시" class="btn" > 
+                </fieldset>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
