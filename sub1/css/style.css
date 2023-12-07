@@ -1,0 +1,35 @@
+
+
+body{
+    font-family:'나눔고딕',Georgia,Serif; 
+    color:#666; 
+    font-size:15px; 
+    line-height:18pt;
+} /* 전체 폰트 스타일 정의 */
+
+header{
+    width: 100vw;
+    height: 80px;
+    background-color: rgb(185, 170, 233);
+    margin-bottom: 30px;
+}
+
+header h2{
+    text-align: center;
+    line-height: 80px;
+}
+
+
+.btn{
+    width: 45%;
+    background-color: rgba(144, 79, 255, 0.5);
+    margin: 10px ;
+    margin-left: 1px;
+    font-size: 1.2em;
+    border: 0;
+}
+.btn:hover{
+    font-weight: bold;
+    color: white;
+    background-color: blueviolet;
+}
